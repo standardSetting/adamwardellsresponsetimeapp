@@ -1,0 +1,17 @@
+<h1>Adam Wardell's response time app</h1>
+<p>Choose a response time in milliseconds:</p>
+<input type='text' id='time' />
+<p>Then click the button to experience that response time.</p>
+<button onclick="respond()">Go!</button>
+<button onclick="reset()">Reset</button>
+<p id='response' style='display: none;'><strong>Hi! I am the response</strong></p>
+
+<script>
+	function respond(){
+		setTimeout( _ => document.getElementById('response').style.display='block', Number(document.getElementById('time').value))
+	}
+
+	function reset(){
+		document.getElementById('response').style.display='none'
+	}
+</script>
